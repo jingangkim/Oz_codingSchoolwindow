@@ -1,0 +1,30 @@
+*{
+    text-align: center;
+}
+html{
+    
+    background-color:burlywood;
+    font-size:16;
+
+}
+body{
+    width:640px;
+    margin:auto;
+}
+
+h1{font-size:60px;
+}
+img{
+    width: 190px;
+    height:200px;
+    border-radius:50px;
+}
+#좋아하는것{font-size:30px;
+line-height:130%;}
+
+
+
+p{font-size:1.5rem;
+}
+
+/*글꼴, 색감, 글자 크기, 바디 레이아웃 크기 다르게 하기*/
