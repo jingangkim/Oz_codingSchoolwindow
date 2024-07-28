@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 더 알아보기</title>
+    <style>
+        [width *= "0"]{
+            border:5px dashed red;
+        }
+
+        p > em{
+            color:blue;
+        }
+
+        #sam ~ img{ 
+            display:none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <img src="images/1-scaled" width="120" alt="랜덤박스">
+    <img src="images/1-scaled" width="120">
+    <img src="images/1-scaled" width="120">
+    <p>랜덤박스는 상품을 무작위로 상자에 넣어서 파는 추첨형 확률 게임의 일종이다.</p>
+    <p>복권과 같은 개념이나 현금 대신 유형 혹은 무형의 상품을 목적으로 하는 것만 다르다. </p>
+    <p>상품은 시계, 향수, 게임, 게임의 각종 <em>포인트/캐시 아이템</em> 등 팔리는 건 뭐든지 될 수 있다.</p>
+    <p>보통 해당 랜덤박스에만 있는 한정판 아이템이나 이벤트로 구매를 유도하는 것이 일반적이다. </p>
+</body>
+</html>
