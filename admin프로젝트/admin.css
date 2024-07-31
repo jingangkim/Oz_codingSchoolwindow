@@ -1,0 +1,33 @@
+
+.themed {
+    display: block;
+    width: 10em;
+    height: 10em;
+    background: black;
+    color: white;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .themed {
+      background: white;
+      color: black;
+    }
+  }
+
+
+  #darkModeButton {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    cursor: pointer;
+    background-color: red;
+  }
+  
+
+  body {background-image : url('https://images.khan.co.kr/article/2017/08/30/l_2017083002001343800322352.jpg');
+        background-repeat:no-repeat;
+    background-size:auto; /*사이즈*/
+    background-position:1100px 30px; /*위치*/
+ 
+    /*background-image:none; 백그라운드 없애는 거 */
+  }
