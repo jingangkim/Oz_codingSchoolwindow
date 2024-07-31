@@ -140,3 +140,14 @@
   background-color: #333;
   color: #fff;
 }
+
+.id::after {
+  content: '*';
+  color: red;
+}.pw::after {
+  content: '*';
+  color: red;
+}.name::after {
+  content: '*';
+  color: red;
+}

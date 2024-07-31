@@ -12,25 +12,25 @@
         <form id="form" action="#">
             <table class="table">
                 <tr>
-                    <th>아이디</th>
+                    <th class="id">아이디</th>
                     <td>
-                        <input name="id" placeholder="아이디" autocomplete="off" required>
+                        <input name="id" placeholder="4자 이상" autocomplete="off" required>
                     </td>
                 </tr>
                 <tr>
-                    <th>비밀번호</th>
+                    <th class="pw">비밀번호</th>
                     <td>
-                        <input type="password" name="pw1" placeholder="비밀번호">
+                        <input type="password" name="pw1" placeholder="비밀번호" required>
                     </td>
                 </tr>
                 <tr>
-                    <th>비밀번호 확인</th>
+                    <th class="pw">비밀번호 확인</th>
                     <td>
-                        <input type="password" name="pw2" placeholder="비밀번호">
+                        <input type="password" name="pw2" placeholder="비밀번호" required>
                     </td>
                 </tr>
                 <tr>
-                    <th>이름</th>
+                    <th class="name">이름</th>
                     <td>
                         <input name="name" placeholder="사용자 이름" autocomplete="off" required>
                     </td>
@@ -52,7 +52,7 @@
                     <td>
                         <div class="gender">
                         <label>
-                            <input type="radio" id="gender" name="gender"><label for="gender">남자</label>
+                            <input type="radio" id="gender" name="gender" checked><label for="gender">남자</label>
                             <input type="radio" id="gender2" name="gender"><label for="gender2">여자</label>
                         </label>
                     </div>
@@ -68,6 +68,7 @@
                                     <input type="radio" id="select2" name="shop"><label for="select2">카페</label>
                                     <input type="radio" id="select3" name="shop"><label for="select3">SNS</label>
                                     <input type="radio" id="select4" name="shop"><label for="select4">지인 추천</label>
+                                    <input type="radio" id="select5" name="shop"><label for="select5">기타</label>
                                </div>
                
                             </td>

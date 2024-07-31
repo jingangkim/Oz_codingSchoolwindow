@@ -11,6 +11,7 @@
     .themed {
       background: white;
       color: black;
+      
     }
   }
 
@@ -22,12 +23,14 @@
     cursor: pointer;
     background-color: red;
   }
-  
+  .table-sm{opacity:0.9;}
 
   body {background-image : url('https://images.khan.co.kr/article/2017/08/30/l_2017083002001343800322352.jpg');
-        background-repeat:no-repeat;
+
+    background-repeat:no-repeat;
     background-size:auto; /*사이즈*/
     background-position:1100px 30px; /*위치*/
+    
  
     /*background-image:none; 백그라운드 없애는 거 */
   }
