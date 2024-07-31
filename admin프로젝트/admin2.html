@@ -10,7 +10,7 @@
         background-image:url('http://dazedkorea.com/data/article/content/3305482.jpg');
         background-repeat:no-repeat; /*옵션이 같으니 콤마 없이 하나만 쳐줌*/
         background-size:650px; /*사이즈*/
-        background-position:10px -20px; /*위치*/
+        background-position:70px -20px; /*위치*/
         background-color:black;
         color:white;
       }
@@ -21,6 +21,7 @@
       .dark-mode td,
       .dark-mode .pagination,
       .dark-mode .page-link
+      
       {
         background-color: #000000;
         color: white;
@@ -30,6 +31,12 @@
         background-color: #000000;
         color: white;
       }
+
+.dark-mode .pagination {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0); }
+
     </style>
 </head>
 <body>
