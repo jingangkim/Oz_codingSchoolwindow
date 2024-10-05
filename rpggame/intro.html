@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="intro.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    
+</head>
+<body>
+    <tr>이 게임은 턴제로 진행되는 게임입니다. <br>
+    <br>
+    당신이 플레이할 직업을 골라주세요.</tr>
+    <br>
+    <br>
+    <br>
+    <div>전사</div>
+    <button id="btn1">설명 보기</button>
+    <div id="desc1" class="description">체력과 방어력이 높지만 공격력이 낮습니다.</div>
+    <div>궁수</div>
+    <button id="btn2">설명 보기</button>
+    <div id="desc2" class="description">치명타 확률과 공격력이 높지만 방어력이 낮습니다.</div>
+    <div>마법사</div>
+    <button id="btn3">설명 보기</button>
+    <div id="desc3" class="description">회피율과 공격력이 높지만 체력이 낮습니다.</div>
+    <form id="class_pick" action="page1.html" method="post"><!--page1.html에 정보를 보냄:```-->
+    <b>직업 선택</b>
+    <div>
+        <input type="radio" name="radioOptions">전사
+        <input type="radio" name="radioOptions">궁수
+        <input type="radio" name="radioOptions">마법사
+    </div>
+        <button type="submit">선택 완료</button>
+    </form>
+</body>
+<script src="intro.js"></script>
+</html>
