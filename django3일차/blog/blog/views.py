@@ -5,13 +5,17 @@ from blog.models import Blog
 from blog.forms import BlogForm
 from django.core.paginator import Paginator
 from django.views.decorators.http import require_http_methods
+from django.db.models import Q
 
 def blog_list(request):
     blogs = Blog.objects.all().order_by('-created_at')
 
     q = request.GET.get('q')
     if q:
-        blogs = blogs.filter(title__icontains=q)
+        blogs = blogs.filter(
+            Q(title__icontains=q)|
+            Q(content__icontains=q)
+        )
 
     paginator = Paginator(blogs, 10)
 
@@ -25,7 +29,8 @@ def blog_list(request):
 
     context = {#'blogs': blogs,
                'count':request.session['count'],
-               'page_object': page_object,}
+               'object_list': page_object.object_list,
+               'page_obj': page_object,}
 
     response = render(request, 'blog_list.html', context)
 
@@ -38,9 +43,12 @@ def blog_detail(request, pk):
     context = {'blog': blog}
     return render(request, 'blog_detail.html', context)
 
+
+
+@login_required()
 def blog_create(request):
-    if not request.user.is_authenticated:
-        return redirect(reverse('login'))
+    # if not request.user.is_authenticated:
+    #     return redirect(reverse('login'))
 
     #if request.method == 'POST':
     form = BlogForm(request.POST or None)
