@@ -56,7 +56,7 @@ def blog_create(request):
         blog = form.save(commit=False)
         blog.author = request.user
         blog.save()
-        return redirect(reverse('blog_detail', kwargs={'pk':blog.pk}))
+        return redirect(reverse('fb:detail', kwargs={'pk':blog.pk}))
     #form = BlogForm()
 
     context = {'form': form}
@@ -69,7 +69,7 @@ def blog_update(request, pk):
     form = BlogForm(request.POST or None, instance=blog)
     if form.is_valid():
         blog = form.save()
-        return redirect(reverse('blog_detail', kwargs={'pk': blog.pk}))
+        return redirect(reverse('fb:detail', kwargs={'pk': blog.pk}))
 
     context = {'blog': blog,
                'form': form,}
@@ -83,4 +83,4 @@ def blog_delete(request, pk):
     blog = get_object_or_404(Blog, pk=pk, author=request.user)
     blog.delete()
 
-    return redirect(reverse('blog_list'))
+    return redirect(reverse('fb:list'))
