@@ -1,12 +1,13 @@
-from django.contrib.auth import get_user_model # 추가된 부분
+from django.contrib.auth import get_user_model
 from django.db import models
 
+from django.urls import reverse
 
-User = get_user_model() # 추가된 부분
+User = get_user_model()
 
 
 class Todo(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE) # 추가된 부분
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     title = models.CharField(max_length=50)
     description = models.TextField()
     start_date = models.DateField()
